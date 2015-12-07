@@ -5717,7 +5717,7 @@ small {
   border-radius: 2px;
   background-color: #fff; }
 
-.card {
+/*.card {
   position: relative;
   margin: 0.5rem 0 1rem 0;
   background-color: #fff;
@@ -5800,7 +5800,7 @@ small {
     display: none; }
     .card .card-reveal .card-title {
       cursor: pointer;
-      display: block; }
+      display: block; }*/
 
 #toast-container {
   display: block;
