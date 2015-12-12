@@ -4,19 +4,27 @@
         <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection"/>
         <!--Import materialadmin.css-->
         <link type="text/css" rel="stylesheet" href="css/materialadmin.css" />
-
+        <link type="text/css" rel="stylesheet" href="css/typeahead.css" />
+        <link type="text/css" rel="stylesheet" href="css/wizard.css" />
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.css" />
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        
+
+        <!--Import jQuery before materialize.js-->
+        <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+        
+        <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+        <script src="js/jquery.bootstrap.wizard.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/DemoFormWizard.js"></script>
     </head>
 
     <body>
-        <!--Import jQuery before materialize.js-->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.js"></script>
-
         <!--Start main elements of the web page-->
         <div class="header z-depth-1 teal lighten-1">
             <div class="container">
@@ -27,36 +35,77 @@
         </div>
         <div class="section" id="main_content">
             <div class="container">
+                <!-- BEGIN FORM WIZARD -->
+                <div class="row"></div>
                 <div class="row">
-                    <div class="col s24 m12">
+                    <div class="col s12">
                         <div class="card">
-                            <div class="card-head style-primary">
-								<header>Personal Data</header>
-							</div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <form class="col s12">
-                                        <div class="row">
-                                            <div class="input-field col s4">
-                                                <input id="first_name" type="text" class="validate">
-                                                <label for="first_name">First Name</label>
-                                            </div>
-                                            <div class="input-field col s4">
-                                                <input id="mid_name" type="text" class="validate">
-                                                <label for="mid_name">Middle Name</label>
-                                            </div>
-                                            <div class="input-field col s4">
-                                                <input id="last_name" type="text" class="validate">
-                                                <label for="last_name">Last Name</label>
-                                            </div>
+                            <div class="card-body ">
+                                <div id="rootwizard1" class="form-wizard form-wizard-horizontal">
+                                    <form class="form floating-label">
+                                        <div class="form-wizard-nav">
+                                            <div class="progress"><div class="progress-bar progress-bar-primary"></div></div>
+                                            <ul class="nav nav-justified">
+                                                <li class="active"><a href="#step1" data-toggle="tab"><span class="step">1</span> <span class="title">PERSONAL DATA</span></a></li>
+                                                <li><a href="#step2" data-toggle="tab"><span class="step">2</span> <span class="title">STUDENT ADDRESS</span></a></li>
+                                                <li><a href="#step3" data-toggle="tab"><span class="step">3</span> <span class="title">EDUCATION</span></a></li>
+                                                <li><a href="#step4" data-toggle="tab"><span class="step">4</span> <span class="title">DOCUMENTS</span></a></li>
+                                            </ul>
+                                        </div><!--end .form-wizard-nav -->
+                                        <div class="tab-content clearfix">
+                                            <div class="tab-pane active" id="step1">
+                                                <div class="row"></div>
+                                                <div class="row">
+                                                    <div class="input-field col s5">
+                                                        <i class="material-icons prefix">account_circle</i>
+                                                        <input id="first_name" type="text" class="validate">
+                                                        <label for="first_name">First Name</label>
+                                                    </div>
+                                                    <div class="input-field col s3">
+                                                        <input id="mid_name" type="text" class="validate">
+                                                        <label for="mid_name">Middle Name</label>
+                                                    </div>
+                                                    <div class="input-field col s4">
+                                                        <input id="last_name" type="text" class="validate">
+                                                        <label for="last_name">Last Name</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="input-field col s4">
+                                                        <i class="material-icons prefix">location_on</i>
+                                                        <input id="city" type="text" class="validate">
+                                                        <label for="city">Your City</label>
+                                                    </div>
+                                                    <div class="input-field col s4" id="bloodhound">
+                                                        <input class="typeahead validate" type="text" placeholder="Country">
+                                                    </div>
+                                                    <div class="input-field col s4" id="bloodhound">
+                                                        <input class="typeahead validate" type="text" placeholder="Nationality">
+                                                    </div>
+                                                </div>
+                                                </div><!--end #step1 -->
+                                                <div class="tab-pane" id="step2">
+                                                </div><!--end #step2 -->
+                                                <div class="tab-pane" id="step3">
+                                                </div><!--end #step3 -->
+                                                <div class="tab-pane" id="step4">
+                                            </div><!--end .tab-content -->
+                                            <ul class="pager wizard">
+                                                <li class="previous first"><a class="btn-raised" href="javascript:void(0);">First</a></li>
+                                                <li class="previous"><a class="btn-raised" href="javascript:void(0);">Previous</a></li>
+                                                <li class="next last"><a class="btn-raised" href="javascript:void(0);">Last</a></li>
+                                                <li class="next"><a class="btn-raised" href="javascript:void(0);">Next</a></li>
+                                            </ul>
                                         </div>
                                     </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                </div><!--end #rootwizard -->
+                            </div><!--end .card-body -->
+                        </div><!--end .card -->
+                    </div><!--end .col -->
+                </div><!--end .row -->
+                <!-- END VALIDATION FORM WIZARD -->
             </div>
         </div>
     </body>
 </html>
+<script src="js/countries.js"></script>
