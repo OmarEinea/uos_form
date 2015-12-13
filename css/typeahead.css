@@ -11,14 +11,6 @@
   top: 28px !important;
 }
 
-.twitter-typeahead {
-    width: 100%;
-}
-
-.typeahead {
-    width: 100%;
-}
-
 .tt-hint {
   color: #bdc1c1
 }
@@ -71,4 +63,13 @@
   margin: 0;
 }
 
-.typeahead, .tt-hint, .tt-input, .tt-menu { width: 100%; }
+.twitter-typeahead, .typeahead, .tt-hint, .tt-input, .tt-menu { width: 100%; }
+
+#bloodhound label {
+    font-size: 0.8rem;
+    -webkit-transform: translateY(-140%);
+    -moz-transform: translateY(-140%);
+    -ms-transform: translateY(-140%);
+    -o-transform: translateY(-140%);
+    transform: translateY(-140%); }
+}
