@@ -73,3 +73,7 @@
     -o-transform: translateY(-140%);
     transform: translateY(-140%); }
 }
+
+#bloodhound input[type=text]:focus + label {
+     color: #000;
+}

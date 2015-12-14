@@ -1018,7 +1018,7 @@ p img.pull-left {
 }
 ul,
 ol {
-  padding-left: 16px;
+  padding-left: 0px;
 }
 ul.list-divided li,
 ol.list-divided li {
@@ -2982,8 +2982,8 @@ textarea.no-resize {
 }
 .help-block {
   position: absolute;
-  right: 0;
-  bottom: -20px;
+  right: 11px;
+  bottom: -2px;
   margin: 0;
   color: inherit;
   opacity: .7;
