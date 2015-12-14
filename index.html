@@ -25,11 +25,11 @@
         <!--Import materialize.js-->
         <script src="js/materialize.js"></script>
         <!--Import css files needed for the form wizard-->
-        <script src="js/jquery.bootstrap.wizard.min.js"></script>
         <script src="js/bootstrap.js"></script>
+        <script src="js/bootstrap-wizard.js"></script>
         <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/wizard.js"></script>
-        <script src="js/datepicker.js"></script>
+        <script src="js/jquery.inputmask.bundle.js"></script>
+        <script src="js/components.js"></script>
         <script src="js/init.js"></script>
     </head>
 
@@ -87,11 +87,11 @@
                                                         <label for="city">City of Birth</label>
                                                     </div>
                                                     <div class="input-field col m4 s12" id="bloodhound">
-                                                        <input id="country" type="text" class="typeahead validate" placeholder="eg. Syria">
+                                                        <input id="country" type="text" class="ctypeahead validate" placeholder="eg. Syria">
                                                         <label for="country" class="tt-label">Country of Birth</label>
                                                     </div>
                                                     <div class="input-field col m4 s12" id="bloodhound">
-                                                        <input id="nationality" type="text" class="typeahead validate" placeholder="eg. Syria">
+                                                        <input id="nationality" type="text" class="ctypeahead validate" placeholder="eg. Syria">
                                                         <label for="nationality" class="tt-label">Nationality</label>
                                                     </div>
                                                 </div>
@@ -131,9 +131,8 @@
                                                         <input type="text" disabled>
                                                         <label>Do you have any special needs? No<input type="checkbox"><span class="lever"></span>Yes:</label>
                                                     </div>
-                                                    <div class="input-field col m6 s12">
-                                                        <input id="describe" type="text" class="validate">
-                                                        <label for="describe">Please describe your condition</label>
+                                                    <div class="input-field col m6 s12" id="bloodhound">
+                                                        <input type="text" class="mtypeahead validate" placeholder="Please describe your condition">
                                                     </div>
                                                     <div class="input-field col m2 s12">
                                                         <input class="with-gap" name="group1" type="radio" id="test1" />
@@ -144,7 +143,6 @@
                                                 </div>
                                             </div><!--end #step1 -->
                                             <div class="tab-pane" id="step2">
-                                            </div>
                                             </div><!--end #step2 -->
                                             <div class="tab-pane" id="step3">
                                             </div><!--end #step3 -->
@@ -167,4 +165,4 @@
         </div><!--Page main content end-->
     </body>
 </html>
-<script src="js/countries.js"></script>
+<script src="js/typeahead-data.js"></script>

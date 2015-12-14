@@ -9,7 +9,7 @@
     local: countries
   });
 
-  $('#bloodhound .typeahead').typeahead({
+  $('#bloodhound .ctypeahead').typeahead({
     hint: true,
     highlight: true,
     minLength: 1
@@ -17,4 +17,25 @@
   {
     name: 'countries',
     source: countries
+  });
+
+  var medical = ["Acquired Brain Injury","Autism","Communication-Hearing","Communication-Speaking","Communication-Speaking & Hearing","Hearing - Deaf","Hearing - Hard Hearing","Learning Difficulties","Mobility Limitation","Psychological - Anxiety","Psychological - Depression","Psychological - Split","Visual - Blindness","Visual - Color Blindness","Visual - Low Vision","Visual - Monocular Vision"];
+
+  // bloodhound
+  // constructs the suggestion engine
+  var medical = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.whitespace,
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+  // this is the countries array declared above
+    local: medical
+  });
+
+  $('#bloodhound .mtypeahead').typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1
+  },
+  {
+    name: 'medical',
+    source: medical
   });
