@@ -31,15 +31,23 @@
         <script src="js/jquery.inputmask.bundle.js"></script>
         <script src="js/components.js"></script>
         <script src="js/init.js"></script>
+        <script src="js/translate.js"></script>
     </head>
 
     <body>
         <!--Page header start-->
-        <div class="header z-depth-1 teal lighten-1">
+        <div class="header z-depth-1 teal">
             <div class="container">
-                <a id="logo-container" herf="http://www.sharjah.ac.ae/" class="brand-logo">
-                    <object id="front-page-logo" type="image/svg+xml" data="img/uos_logo.svg"></object>
-                </a>
+                <div class="row">
+                    <div class="col s12 m4">
+                        <a id="logo-container" herf="http://www.sharjah.ac.ae/" class="brand-logo">
+                            <object id="front-page-logo" type="image/svg+xml" data="img/uos_logo.svg"></object>
+                        </a>
+                    </div>
+                    <div class="right" >
+                        <button class="btn-normal amber" style="margin-top: 32px; margin-right: 12px;"><h6 id="translate" onclick="changeText()">عربي</h6></button>
+                    </div>
+                </div>
             </div>
         </div><!--Page header end-->
         <!--Page main content start-->
@@ -56,10 +64,10 @@
                                         <div class="form-wizard-nav">
                                             <div class="progress"><div class="progress-bar progress-bar-primary"></div></div>
                                             <ul class="nav nav-justified">
-                                                <li class="active"><a href="#step1" data-toggle="tab"><span class="step">1</span> <span class="title">PERSONAL DATA</span></a></li>
-                                                <li><a href="#step2" data-toggle="tab"><span class="step">2</span> <span class="title">STUDENT ADDRESS</span></a></li>
-                                                <li><a href="#step3" data-toggle="tab"><span class="step">3</span> <span class="title">EDUCATION</span></a></li>
-                                                <li><a href="#step4" data-toggle="tab"><span class="step">4</span> <span class="title">DOCUMENTS</span></a></li>
+                                                <li class="active"><a href="#step1" data-toggle="tab"><span class="step">1</span> <span id="PD" class="title">PERSONAL DATA</span></a></li>
+                                                <li><a href="#step2" data-toggle="tab"><span class="step">2</span> <span id="SA" class="title">STUDENT ADDRESS</span></a></li>
+                                                <li><a href="#step3" data-toggle="tab"><span class="step">3</span> <span id="Ed" class="title">EDUCATION</span></a></li>
+                                                <li><a href="#step4" data-toggle="tab"><span class="step">4</span> <span id="Do" class="title">DOCUMENTS</span></a></li>
                                             </ul>
                                         </div><!--end .form-wizard-nav -->
                                         <div class="tab-content clearfix">
@@ -69,37 +77,37 @@
                                                     <div class="input-field col m4 s12">
                                                         <i class="material-icons prefix">account_circle</i>
                                                         <input id="first_name" type="text" class="validate">
-                                                        <label for="first_name">First Name</label>
+                                                        <label id="FN" for="first_name">First Name</label>
                                                     </div>
                                                     <div class="input-field col m4 s12">
                                                         <input id="mid_name" type="text" class="validate">
-                                                        <label for="mid_name">Middle Name</label>
+                                                        <label id="MN" for="mid_name">Middle Name</label>
                                                     </div>
                                                     <div class="input-field col m4 s12">
                                                         <input id="last_name" type="text" class="validate">
-                                                        <label for="last_name">Last Name</label>
+                                                        <label id="LN" for="last_name">Last Name</label>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="input-field col m4 s12">
                                                         <i class="material-icons prefix">location_on</i>
                                                         <input id="city" type="text" class="validate" placeholder="eg. Damascus">
-                                                        <label for="city">City of Birth</label>
+                                                        <label id="CiB" for="city">City of Birth</label>
                                                     </div>
                                                     <div class="input-field col m4 s12" id="bloodhound">
                                                         <input id="country" type="text" class="ctypeahead validate" placeholder="eg. Syria">
-                                                        <label for="country" class="tt-label">Country of Birth</label>
+                                                        <label id="CoB" for="country" class="tt-label">Country of Birth</label>
                                                     </div>
                                                     <div class="input-field col m4 s12" id="bloodhound">
                                                         <input id="nationality" type="text" class="ctypeahead validate" placeholder="eg. Syria">
-                                                        <label for="nationality" class="tt-label">Nationality</label>
+                                                        <label id="Na" for="nationality" class="tt-label">Nationality</label>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="input-field date col m4 s12" id="day-picker">
                                                         <i class="material-icons prefix">today</i>
                                                         <input id="birthdate" type="text" placeholder="yyyy/mm/dd">
-                                                        <label for="birthdate">Date of Birth</label>
+                                                        <label id="DB" for="birthdate">Date of Birth</label>
                                                         <span class="input-group-addon"></span>
                                                     </div>
                                                     <div class="input-field col m4 s12">
@@ -111,7 +119,7 @@
                                                             <option value="5">Sikh</option>
                                                             <option value="6">Others</option>
                                                         </select>
-                                                        <label>Religion</label>
+                                                        <label id="Re">Religion</label>
                                                     </div>
                                                     <div class="input-field col m4 s12">
                                                         <select>
@@ -122,17 +130,17 @@
                                                             <option value="5">Widowed</option>
                                                             <option value="6">Others</option>
                                                         </select>
-                                                        <label>Marital Status</label>
+                                                        <label id="MS">Marital Status</label>
                                                     </div>
                                                 </div>
                                                 <div class="row">
                                                     <div class="input-field switch col m4 s12">
                                                         <i class="material-icons prefix">live_help</i>
                                                         <input type="text" disabled>
-                                                        <label>Do you have any special needs? No<input type="checkbox"><span class="lever"></span>Yes:</label>
+                                                        <label><span id="SN1">Do you have any special needs? No</span><input type="checkbox"><span class="lever"></span><span id="SN2">Yes:</span></label>
                                                     </div>
                                                     <div class="input-field col m6 s12" id="bloodhound">
-                                                        <input type="text" class="htypeahead validate" placeholder="Please describe your condition">
+                                                        <input id="DC" type="text" class="htypeahead validate" placeholder="Please describe your condition">
                                                     </div>
                                                     <div class="input-field col m2 s12">
                                                         <input class="with-gap" name="group1" type="radio" id="test1" />
@@ -151,8 +159,8 @@
                                                         <label for="currentcity">Current City</label>
                                                     </div>
                                                     <div class="input-field col m4 s12" id="bloodhound">
-                                                        <input id="country" type="text" class="ctypeahead validate" placeholder="eg. Syria">
-                                                        <label for="country" class="tt-label">Current Country</label>
+                                                        <input id="currentcountry" type="text" class="ctypeahead validate" placeholder="eg. Syria">
+                                                        <label for="currentcountry" class="tt-label">Current Country</label>
                                                     </div>
                                                     <div class="input-field col m4 s12">
                                                         <input id="zipcode" type="text" class="validate" placeholder="eg. 50422">
@@ -226,31 +234,12 @@
                                                         <a class="btn-floating btn-large waves-effect waves-light orange"><i class="material-icons">add</i></a>
                                                     </div>
                                                 </div>
-                                                <!--<div class="row">
-                                                    <div class="input-field col m4 s12">
-                                                        <select>
-                                                            <option value="1" selected>ENGINEERING</option>
-                                                            <option value="2">BUSINESS ADMINISTRATION</option>
-                                                            <option value="3">MEDICINE</option>
-                                                            <option value="4">SCIENCES</option>
-                                                            <option value="5">COMMUNITY COLLEGE</option>
-                                                            <option value="6">PHARMACY</option>
-                                                            <option value="7">COMMUNICATION</option>
-                                                            <option value="8">FINE ARTS AND DESIGN</option>
-                                                            <option value="9">LAW</option>
-                                                            <option value="10">HEALTH SCIENCES</option>
-                                                            <option value="11">ARTS, HUMANITIES AND SOCIAL SCIENCES</option>
-                                                            <option value="12">SHARIA AND ISLAMIC STUDIES</option>
-                                                        </select>
-                                                        <label>Desired Collage</label>
-                                                    </div>
-                                                </div>-->
                                             </div><!--end #step3 -->
                                             <div class="tab-pane" id="step4">
                                                 <div class="row"></div>
                                                 <div class="row">
                                                     <div class="file-field input-field col m6 s12">
-                                                        <div class="btn">
+                                                        <div class="btn-normal">
                                                             <span>File</span>
                                                             <input type="file">
                                                         </div>
@@ -259,7 +248,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="file-field input-field col m6 s12">
-                                                        <div class="btn">
+                                                        <div class="btn-normal">
                                                             <span>File</span>
                                                             <input type="file">
                                                         </div>
@@ -270,10 +259,10 @@
                                                 </div>
                                             </div><!--end .tab-content -->
                                             <ul class="pager wizard">
-                                                <li class="previous first"><a class="btn-raised" href="javascript:void(0);">First</a></li>
-                                                <li class="previous"><a class="btn-raised" href="javascript:void(0);">Previous</a></li>
-                                                <li class="next last"><a class="btn-raised" href="javascript:void(0);">Last</a></li>
-                                                <li class="next"><a class="btn-raised" href="javascript:void(0);">Next</a></li>
+                                                <li class="previous first"><a class="btn-raised" href="javascript:void(0);" id="Fi">First</a></li>
+                                                <li class="previous"><a class="btn-raised" href="javascript:void(0);" id="Pr">Previous</a></li>
+                                                <li class="next last"><a class="btn-raised" href="javascript:void(0);" id="La">Last</a></li>
+                                                <li class="next"><a class="btn-raised" href="javascript:void(0);" id="Ne">Next</a></li>
                                             </ul>
                                         </div>
                                     </form>
@@ -284,6 +273,44 @@
                 </div><!--end .row which ends form wizard-->
             </div>
         </div><!--Page main content end-->
+        <!--Page footer start-->
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col m6 s12">
+                        <h5 class="white-text">Before you leave!</h5>
+                        <p class="grey-text text-lighten-4">
+                            We hope you had a good experience filling<br>
+                            this addmission form and we are looking<br>
+                            forward to seeing you in the university.</p>
+                    </div>
+                    <div class="col m3 offset-m2 s12">
+                        <h5 class="white-text">Sources:</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="http://materializecss.com/">Materialize</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://www.codecovers.eu/materialadmin">Material Admin</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://getbootstrap.com/">Bootstrap</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://jquery.com/">jQuery</a></li>
+                        </ul>
+                    </div>
+                    <div class="col m3 offset-m2 s12">
+                        <h5 class="white-text">About:</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="https://design.google.com/resources/">Material Design</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://www.sharjah.ac.ae/en/Pages/default.aspx">University of Sharjah</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://github.com/OmarEinea/uos_form">Project</a></li>
+                            <li><a class="grey-text text-lighten-3" href="http://forum.xda-developers.com/member.php?u=4800636">Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                Designed by Omar Einea
+                <a class="grey-text text-lighten-4 right">MIT License</a>
+                </div>
+            </div>
+        </footer><!--Page footer end-->
     </body>
 </html>
 <script src="js/typeahead-data.js"></script>
