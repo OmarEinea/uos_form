@@ -19,15 +19,36 @@
     source: countries
   });
 
-  var medical = ["Acquired Brain Injury","Autism","Communication-Hearing","Communication-Speaking","Communication-Speaking & Hearing","Hearing - Deaf","Hearing - Hard Hearing","Learning Difficulties","Mobility Limitation","Psychological - Anxiety","Psychological - Depression","Psychological - Split","Visual - Blindness","Visual - Color Blindness","Visual - Low Vision","Visual - Monocular Vision"];
+  var health = ["Acquired Brain Injury","Autism","Communication-Hearing","Communication-Speaking","Communication-Speaking & Hearing","Hearing - Deaf","Hearing - Hard Hearing","Learning Difficulties","Mobility Limitation","Psychological - Anxiety","Psychological - Depression","Psychological - Split","Visual - Blindness","Visual - Color Blindness","Visual - Low Vision","Visual - Monocular Vision"];
 
   // bloodhound
   // constructs the suggestion engine
-  var medical = new Bloodhound({
+  var health = new Bloodhound({
     datumTokenizer: Bloodhound.tokenizers.whitespace,
     queryTokenizer: Bloodhound.tokenizers.whitespace,
   // this is the countries array declared above
-    local: medical
+    local: health
+  });
+
+  $('#bloodhound .htypeahead').typeahead({
+    hint: true,
+    highlight: true,
+    minLength: 1
+  },
+  {
+    name: 'health',
+    source: health
+  });
+
+  var majors = ["Accounting","Administrative Work","Applied Physics","Applied Sociology","Arabic Language & Literature","Architectural Engineering","Archiving & Electronic Publish","Biological Analysis/Technique","Biomedical Science","Biotechnology","Broadcast Journalism","Business Administration","Career Development","Chemistry","Civil Engineering","Clinical Nutrition & Dietetics","Common Business Program","Communication","Comparative Jurisprudence","Comprehensive Examination","Computer Engineering","Computer Science","Construction & Materials","Dental Assistant","Dental Hygiene","Dental Laboratory Technology","Dental Surgery","Dentistry Training","Documentation & Electronic Arc","Economics","Educ & Arabic Language/Lit","Educ & History/Islamic Civil","Education","Education & English Lang/Lit","Education & Islamic Studies","Electrical/Electronic Engr.","Electronic Media","Engineering Management","English Language & Literature","Engr. Management & Innovation","Environmental Engineering","Environmental Health","Environmental Health & Safety","Exegesis & Hadith","Fashion Design & Textile","Finance","Fine Arts","Food Safety","Foundation","Foundations of Religion","Fundamentals of Jurisprudence","General Communication","General Mass Communication","Geotechnical Engineering","Graphic Design","Graphic Design and Multimedia","Graphics  Design & Multimedia","Industrial Engr & Engr Mngt","Information Tech. - Multimedia","nformation Technology","Intensive Arabic Language","Intensive English Lang Program","Interior Architecture & Design","International Relations","Islamic Banking","Islamic Banking(Arabic)","Islamic Studies","Jewelry Design","Journalism","Jurisprudence & its Foundation","Law","Leadership in Health Pro. Educ","Library & Information Systems","Linguistics & Translation","Literature & Translation","Management","Management Information Systems","Marketing","Mass Communication","Mathematics","Mechanical Engineering","Medical Diagnostic Imag - Bdg","Medical Diagnostic Imaging","Medical Lab Sciences","Medicine & Surgery","Molecular Medicine","Non Degree Graduate","Non Degree Undergraduate","Nuclear Engineering","Nursing","Nursing - Bdg","Office Technology","Painting","Pharmacy","Pharmacy Assistant","Physiotherapy","Plant Sciences","Print Journalism","Printmaking","Private Law","Public Administration","Public Law","Public Relation","Public Relations","Quran & Hadith","Radio & TV","Radiography & Medical Instrmnt","Sculpture","Secretarial & Office Mangt","Secretariat & Office Mgt","Shari'a & Comparative Law","Shari'a/Islamic Shari'a","Sharia & Law","Sociology","Special Education","Structural Engineering","Sustainable/Renewable Enrg Eng","Thesis","Translation","Transportation Engineering","Water Resources/Environ Eng"];
+
+  // bloodhound
+  // constructs the suggestion engine
+  var majors = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.whitespace,
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+  // this is the countries array declared above
+    local: majors
   });
 
   $('#bloodhound .mtypeahead').typeahead({
@@ -36,6 +57,6 @@
     minLength: 1
   },
   {
-    name: 'medical',
-    source: medical
+    name: 'majors',
+    source: majors
   });
