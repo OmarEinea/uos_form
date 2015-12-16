@@ -45,7 +45,10 @@
                         </a>
                     </div>
                     <div class="right" >
-                        <button class="btn-normal amber" style="margin-top: 32px; margin-right: 12px;"><h6 id="translate" onclick="changeText()">عربي</h6></button>
+                        <button class="btn-normal amber" style="margin-top: 32px; margin-right: 12px;"><h6 id="translate" onclick="changeText()" style="font-size: 1.3rem;">عربي</h6></button>
+                    </div>
+                    <div class="right">
+                        <h6 id="arwarning" style="margin-top: 36px; margin-right: 16px; color: white; font-size: 1.5rem;"></h6>
                     </div>
                 </div>
             </div>
@@ -90,17 +93,17 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="input-field col m4 s12">
-                                                        <i class="material-icons prefix">location_on</i>
-                                                        <input id="city" type="text" class="validate" placeholder="eg. Damascus">
+                                                        <i class="material-icons prefix">place</i>
+                                                        <select class="select-icon"><option>Saudi Arabia</option><option>Qatar</option><option>Oman</option><option>United Arab Emirates</option><option>Kuwait</option><option>Bahrain</option><option>Yemen</option><option>Palestine</option><option>Syria</option><option>Jordan</option><option>Egypt</option><option>Lebanon</option><option>Andorra</option><option>Afghanistan</option><option>Antigua and Barbuda</option><option>Anguilla</option><option>Albania</option><option>Armenia</option><option>Angola</option><option>Antarctica</option><option>Argentina</option><option>American Samoa</option><option>Austria</option><option>Australia</option><option>Aruba</option><option>Åland</option><option>Azerbaijan</option><option>Bosnia and Herzegovina</option><option>Barbados</option><option>Bangladesh</option><option>Belgium</option><option>Burkina Faso</option><option>Bulgaria</option><option>Burundi</option><option>Benin</option><option>Saint Barthélemy</option><option>Bermuda</option><option>Brunei</option><option>Bolivia</option><option>Bonaire</option><option>Brazil</option><option>Bahamas</option><option>Bhutan</option><option>Bouvet Island</option><option>Botswana</option><option>Belarus</option><option>Belize</option><option>Canada</option><option>Cocos [Keeling] Islands</option><option>Congo</option><option>Central African Republic</option><option>Republic of the Congo</option><option>Switzerland</option><option>Ivory Coast</option><option>Cook Islands</option><option>Chile</option><option>Cameroon</option><option>China</option><option>Colombia</option><option>Costa Rica</option><option>Cuba</option><option>Cape Verde</option><option>Curacao</option><option>Christmas Island</option><option>Cyprus</option><option>Czechia</option><option>Germany</option><option>Djibouti</option><option>Denmark</option><option>Dominica</option><option>Dominican Republic</option><option>Algeria</option><option>Ecuador</option><option>Estonia</option><option>Western Sahara</option><option>Eritrea</option><option>Spain</option><option>Ethiopia</option><option>Finland</option><option>Fiji</option><option>Falkland Islands</option><option>Micronesia</option><option>Faroe Islands</option><option>France</option><option>Gabon</option><option>United Kingdom</option><option>Grenada</option><option>Georgia</option><option>French Guiana</option><option>Guernsey</option><option>Ghana</option><option>Gibraltar</option><option>Greenland</option><option>Gambia</option><option>Guinea</option><option>Guadeloupe</option><option>Equatorial Guinea</option><option>Greece</option><option>South Georgia and the South Sandwich Islands</option><option>Guatemala</option><option>Guam</option><option>Guinea-Bissau</option><option>Guyana</option><option>Hong Kong</option><option>Heard Island and McDonald Islands</option><option>Honduras</option><option>Croatia</option><option>Haiti</option><option>Hungary</option><option>Indonesia</option><option>Ireland</option><option>Israel</option><option>Isle of Man</option><option>India</option><option>British Indian Ocean Territory</option><option>Iraq</option><option>Iran</option><option>Iceland</option><option>Italy</option><option>Jersey</option><option>Jamaica</option><option>Japan</option><option>Kenya</option><option>Kyrgyzstan</option><option>Cambodia</option><option>Kiribati</option><option>Comoros</option><option>Saint Kitts and Nevis</option><option>North Korea</option><option>South Korea</option><option>Cayman Islands</option><option>Kazakhstan</option><option>Laos</option><option>Saint Lucia</option><option>Liechtenstein</option><option>Sri Lanka</option><option>Liberia</option><option>Lesotho</option><option>Lithuania</option><option>Luxembourg</option><option>Latvia</option><option>Libya</option><option>Morocco</option><option>Monaco</option><option>Moldova</option><option>Montenegro</option><option>Saint Martin</option><option>Madagascar</option><option>Marshall Islands</option><option>Macedonia</option><option>Mali</option><option>Myanmar or Burma</option><option>Mongolia</option><option>Macao</option><option>Northern Mariana Islands</option><option>Martinique</option><option>Mauritania</option><option>Montserrat</option><option>Malta</option><option>Mauritius</option><option>Maldives</option><option>Malawi</option><option>Mexico</option><option>Malaysia</option><option>Mozambique</option><option>Namibia</option><option>New Caledonia</option><option>Niger</option><option>Norfolk Island</option><option>Nigeria</option><option>Nicaragua</option><option>Netherlands</option><option>Norway</option><option>Nepal</option><option>Nauru</option><option>Niue</option><option>New Zealand</option><option>Panama</option><option>Peru</option><option>French Polynesia</option><option>Papua New Guinea</option><option>Philippines</option><option>Pakistan</option><option>Poland</option><option>Saint Pierre and Miquelon</option><option>Pitcairn Islands</option><option>Puerto Rico</option><option>Portugal</option><option>Palau</option><option>Paraguay</option><option>Réunion</option><option>Romania</option><option>Serbia</option><option>Russia</option><option>Rwanda</option><option>Solomon Islands</option><option>Seychelles</option><option>Sudan</option><option>Sweden</option><option>Singapore</option><option>Saint Helena</option><option>Slovenia</option><option>Svalbard and Jan Mayen</option><option>Slovakia</option><option>Sierra Leone</option><option>San Marino</option><option>Senegal</option><option>Somalia</option><option>Suriname</option><option>South Sudan</option><option>São Tomé and Príncipe</option><option>El Salvador</option><option>Sint Maarten</option><option>Swaziland</option><option>Turks and Caicos Islands</option><option>Chad</option><option>French Southern Territories</option><option>Togo</option><option>Thailand</option><option>Tajikistan</option><option>Tokelau</option><option>East Timor</option><option>Turkmenistan</option><option>Tunisia</option><option>Tonga</option><option>Turkey</option><option>Trinidad and Tobago</option><option>Tuvalu</option><option>Taiwan</option><option>Tanzania</option><option>Ukraine</option><option>Uganda</option><option>U.S. Minor Outlying Islands</option><option>United States</option><option>Uruguay</option><option>Uzbekistan</option><option>Vatican City</option><option>Saint Vincent and the Grenadines</option><option>Venezuela</option><option>British Virgin Islands</option><option>U.S. Virgin Islands</option><option>Vietnam</option><option>Vanuatu</option><option>Wallis and Futuna</option><option>Samoa</option><option>Kosovo</option><option>Mayotte</option><option>South Africa</option><option>Zambia</option><option>Zimbabwe</option></select>
+                                                        <label id="Na">Nationality</label>
+                                                    </div>
+                                                    <div class="input-field col m4 s12">
+                                                        <select><option>Saudi Arabia</option><option>Qatar</option><option>Oman</option><option>United Arab Emirates</option><option>Kuwait</option><option>Bahrain</option><option>Yemen</option><option>Palestine</option><option>Syria</option><option>Jordan</option><option>Egypt</option><option>Lebanon</option><option>Andorra</option><option>Afghanistan</option><option>Antigua and Barbuda</option><option>Anguilla</option><option>Albania</option><option>Armenia</option><option>Angola</option><option>Antarctica</option><option>Argentina</option><option>American Samoa</option><option>Austria</option><option>Australia</option><option>Aruba</option><option>Åland</option><option>Azerbaijan</option><option>Bosnia and Herzegovina</option><option>Barbados</option><option>Bangladesh</option><option>Belgium</option><option>Burkina Faso</option><option>Bulgaria</option><option>Burundi</option><option>Benin</option><option>Saint Barthélemy</option><option>Bermuda</option><option>Brunei</option><option>Bolivia</option><option>Bonaire</option><option>Brazil</option><option>Bahamas</option><option>Bhutan</option><option>Bouvet Island</option><option>Botswana</option><option>Belarus</option><option>Belize</option><option>Canada</option><option>Cocos [Keeling] Islands</option><option>Congo</option><option>Central African Republic</option><option>Republic of the Congo</option><option>Switzerland</option><option>Ivory Coast</option><option>Cook Islands</option><option>Chile</option><option>Cameroon</option><option>China</option><option>Colombia</option><option>Costa Rica</option><option>Cuba</option><option>Cape Verde</option><option>Curacao</option><option>Christmas Island</option><option>Cyprus</option><option>Czechia</option><option>Germany</option><option>Djibouti</option><option>Denmark</option><option>Dominica</option><option>Dominican Republic</option><option>Algeria</option><option>Ecuador</option><option>Estonia</option><option>Western Sahara</option><option>Eritrea</option><option>Spain</option><option>Ethiopia</option><option>Finland</option><option>Fiji</option><option>Falkland Islands</option><option>Micronesia</option><option>Faroe Islands</option><option>France</option><option>Gabon</option><option>United Kingdom</option><option>Grenada</option><option>Georgia</option><option>French Guiana</option><option>Guernsey</option><option>Ghana</option><option>Gibraltar</option><option>Greenland</option><option>Gambia</option><option>Guinea</option><option>Guadeloupe</option><option>Equatorial Guinea</option><option>Greece</option><option>South Georgia and the South Sandwich Islands</option><option>Guatemala</option><option>Guam</option><option>Guinea-Bissau</option><option>Guyana</option><option>Hong Kong</option><option>Heard Island and McDonald Islands</option><option>Honduras</option><option>Croatia</option><option>Haiti</option><option>Hungary</option><option>Indonesia</option><option>Ireland</option><option>Israel</option><option>Isle of Man</option><option>India</option><option>British Indian Ocean Territory</option><option>Iraq</option><option>Iran</option><option>Iceland</option><option>Italy</option><option>Jersey</option><option>Jamaica</option><option>Japan</option><option>Kenya</option><option>Kyrgyzstan</option><option>Cambodia</option><option>Kiribati</option><option>Comoros</option><option>Saint Kitts and Nevis</option><option>North Korea</option><option>South Korea</option><option>Cayman Islands</option><option>Kazakhstan</option><option>Laos</option><option>Saint Lucia</option><option>Liechtenstein</option><option>Sri Lanka</option><option>Liberia</option><option>Lesotho</option><option>Lithuania</option><option>Luxembourg</option><option>Latvia</option><option>Libya</option><option>Morocco</option><option>Monaco</option><option>Moldova</option><option>Montenegro</option><option>Saint Martin</option><option>Madagascar</option><option>Marshall Islands</option><option>Macedonia</option><option>Mali</option><option>Myanmar or Burma</option><option>Mongolia</option><option>Macao</option><option>Northern Mariana Islands</option><option>Martinique</option><option>Mauritania</option><option>Montserrat</option><option>Malta</option><option>Mauritius</option><option>Maldives</option><option>Malawi</option><option>Mexico</option><option>Malaysia</option><option>Mozambique</option><option>Namibia</option><option>New Caledonia</option><option>Niger</option><option>Norfolk Island</option><option>Nigeria</option><option>Nicaragua</option><option>Netherlands</option><option>Norway</option><option>Nepal</option><option>Nauru</option><option>Niue</option><option>New Zealand</option><option>Panama</option><option>Peru</option><option>French Polynesia</option><option>Papua New Guinea</option><option>Philippines</option><option>Pakistan</option><option>Poland</option><option>Saint Pierre and Miquelon</option><option>Pitcairn Islands</option><option>Puerto Rico</option><option>Portugal</option><option>Palau</option><option>Paraguay</option><option>Réunion</option><option>Romania</option><option>Serbia</option><option>Russia</option><option>Rwanda</option><option>Solomon Islands</option><option>Seychelles</option><option>Sudan</option><option>Sweden</option><option>Singapore</option><option>Saint Helena</option><option>Slovenia</option><option>Svalbard and Jan Mayen</option><option>Slovakia</option><option>Sierra Leone</option><option>San Marino</option><option>Senegal</option><option>Somalia</option><option>Suriname</option><option>South Sudan</option><option>São Tomé and Príncipe</option><option>El Salvador</option><option>Sint Maarten</option><option>Swaziland</option><option>Turks and Caicos Islands</option><option>Chad</option><option>French Southern Territories</option><option>Togo</option><option>Thailand</option><option>Tajikistan</option><option>Tokelau</option><option>East Timor</option><option>Turkmenistan</option><option>Tunisia</option><option>Tonga</option><option>Turkey</option><option>Trinidad and Tobago</option><option>Tuvalu</option><option>Taiwan</option><option>Tanzania</option><option>Ukraine</option><option>Uganda</option><option>U.S. Minor Outlying Islands</option><option>United States</option><option>Uruguay</option><option>Uzbekistan</option><option>Vatican City</option><option>Saint Vincent and the Grenadines</option><option>Venezuela</option><option>British Virgin Islands</option><option>U.S. Virgin Islands</option><option>Vietnam</option><option>Vanuatu</option><option>Wallis and Futuna</option><option>Samoa</option><option>Kosovo</option><option>Mayotte</option><option>South Africa</option><option>Zambia</option><option>Zimbabwe</option></select>
+                                                        <label id="CoB">Country of Birth</label>
+                                                    </div>
+                                                    <div class="input-field col m4 s12">
+                                                        <input id="city" type="text" class="validate" placeholder="Riyadh">
                                                         <label id="CiB" for="city">City of Birth</label>
-                                                    </div>
-                                                    <div class="input-field col m4 s12" id="bloodhound">
-                                                        <input id="country" type="text" class="ctypeahead validate" placeholder="eg. Syria">
-                                                        <label id="CoB" for="country" class="tt-label">Country of Birth</label>
-                                                    </div>
-                                                    <div class="input-field col m4 s12" id="bloodhound">
-                                                        <input id="nationality" type="text" class="ctypeahead validate" placeholder="eg. Syria">
-                                                        <label id="Na" for="nationality" class="tt-label">Nationality</label>
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -112,23 +115,23 @@
                                                     </div>
                                                     <div class="input-field col m4 s12">
                                                         <select>
-                                                            <option value="1" selected>Muslim</option>
-                                                            <option value="2">Christian</option>
-                                                            <option value="3">Hindu</option>
-                                                            <option value="4">Buddhist</option>
-                                                            <option value="5">Sikh</option>
-                                                            <option value="6">Others</option>
+                                                            <option selected>Muslim</option>
+                                                            <option>Christian</option>
+                                                            <option>Hindu</option>
+                                                            <option>Buddhist</option>
+                                                            <option>Sikh</option>
+                                                            <option>Others</option>
                                                         </select>
                                                         <label id="Re">Religion</label>
                                                     </div>
                                                     <div class="input-field col m4 s12">
                                                         <select>
-                                                            <option value="1" selected>Single</option>
-                                                            <option value="2">Married</option>
-                                                            <option value="3">Divorced</option>
-                                                            <option value="4">Separated</option>
-                                                            <option value="5">Widowed</option>
-                                                            <option value="6">Others</option>
+                                                            <option selected>Single</option>
+                                                            <option>Married</option>
+                                                            <option>Divorced</option>
+                                                            <option>Separated</option>
+                                                            <option>Widowed</option>
+                                                            <option>Others</option>
                                                         </select>
                                                         <label id="MS">Marital Status</label>
                                                     </div>
@@ -139,8 +142,16 @@
                                                         <input type="text" disabled>
                                                         <label><span id="SN1">Do you have any special needs? No</span><input type="checkbox"><span class="lever"></span><span id="SN2">Yes:</span></label>
                                                     </div>
-                                                    <div class="input-field col m6 s12" id="bloodhound">
-                                                        <input id="DC" type="text" class="htypeahead validate" placeholder="Please describe your condition">
+                                                    <div class="input-field col m2 s12">
+                                                        <select multiple>
+                                                            <option disabled selected>Condition Type</option>
+                                                            <option>Physical</option>
+                                                            <option>Learning</option>
+                                                            <option>Behaviour</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="input-field col m4 s12" id="bloodhound">
+                                                        <input id="DC" type="text" class="htypeahead validate" placeholder="Please further describe your condition">
                                                     </div>
                                                     <div class="input-field col m2 s12">
                                                         <input class="with-gap" name="group1" type="radio" id="test1" />
@@ -154,16 +165,16 @@
                                                 <div class="row"></div>
                                                 <div class="row">
                                                     <div class="input-field col m4 s12">
-                                                        <i class="material-icons prefix">location_on</i>
-                                                        <input id="currentcity" type="text" class="validate" placeholder="eg. Damascus">
-                                                        <label for="currentcity">Current City</label>
-                                                    </div>
-                                                    <div class="input-field col m4 s12" id="bloodhound">
-                                                        <input id="currentcountry" type="text" class="ctypeahead validate" placeholder="eg. Syria">
-                                                        <label for="currentcountry" class="tt-label">Current Country</label>
+                                                        <i class="material-icons prefix">place</i>
+                                                        <select class="select-icon"><option>Saudi Arabia</option><option>Qatar</option><option>Oman</option><option>United Arab Emirates</option><option>Kuwait</option><option>Bahrain</option><option>Yemen</option><option>Palestine</option><option>Syria</option><option>Jordan</option><option>Egypt</option><option>Lebanon</option><option>Andorra</option><option>Afghanistan</option><option>Antigua and Barbuda</option><option>Anguilla</option><option>Albania</option><option>Armenia</option><option>Angola</option><option>Antarctica</option><option>Argentina</option><option>American Samoa</option><option>Austria</option><option>Australia</option><option>Aruba</option><option>Åland</option><option>Azerbaijan</option><option>Bosnia and Herzegovina</option><option>Barbados</option><option>Bangladesh</option><option>Belgium</option><option>Burkina Faso</option><option>Bulgaria</option><option>Burundi</option><option>Benin</option><option>Saint Barthélemy</option><option>Bermuda</option><option>Brunei</option><option>Bolivia</option><option>Bonaire</option><option>Brazil</option><option>Bahamas</option><option>Bhutan</option><option>Bouvet Island</option><option>Botswana</option><option>Belarus</option><option>Belize</option><option>Canada</option><option>Cocos [Keeling] Islands</option><option>Congo</option><option>Central African Republic</option><option>Republic of the Congo</option><option>Switzerland</option><option>Ivory Coast</option><option>Cook Islands</option><option>Chile</option><option>Cameroon</option><option>China</option><option>Colombia</option><option>Costa Rica</option><option>Cuba</option><option>Cape Verde</option><option>Curacao</option><option>Christmas Island</option><option>Cyprus</option><option>Czechia</option><option>Germany</option><option>Djibouti</option><option>Denmark</option><option>Dominica</option><option>Dominican Republic</option><option>Algeria</option><option>Ecuador</option><option>Estonia</option><option>Western Sahara</option><option>Eritrea</option><option>Spain</option><option>Ethiopia</option><option>Finland</option><option>Fiji</option><option>Falkland Islands</option><option>Micronesia</option><option>Faroe Islands</option><option>France</option><option>Gabon</option><option>United Kingdom</option><option>Grenada</option><option>Georgia</option><option>French Guiana</option><option>Guernsey</option><option>Ghana</option><option>Gibraltar</option><option>Greenland</option><option>Gambia</option><option>Guinea</option><option>Guadeloupe</option><option>Equatorial Guinea</option><option>Greece</option><option>South Georgia and the South Sandwich Islands</option><option>Guatemala</option><option>Guam</option><option>Guinea-Bissau</option><option>Guyana</option><option>Hong Kong</option><option>Heard Island and McDonald Islands</option><option>Honduras</option><option>Croatia</option><option>Haiti</option><option>Hungary</option><option>Indonesia</option><option>Ireland</option><option>Israel</option><option>Isle of Man</option><option>India</option><option>British Indian Ocean Territory</option><option>Iraq</option><option>Iran</option><option>Iceland</option><option>Italy</option><option>Jersey</option><option>Jamaica</option><option>Japan</option><option>Kenya</option><option>Kyrgyzstan</option><option>Cambodia</option><option>Kiribati</option><option>Comoros</option><option>Saint Kitts and Nevis</option><option>North Korea</option><option>South Korea</option><option>Cayman Islands</option><option>Kazakhstan</option><option>Laos</option><option>Saint Lucia</option><option>Liechtenstein</option><option>Sri Lanka</option><option>Liberia</option><option>Lesotho</option><option>Lithuania</option><option>Luxembourg</option><option>Latvia</option><option>Libya</option><option>Morocco</option><option>Monaco</option><option>Moldova</option><option>Montenegro</option><option>Saint Martin</option><option>Madagascar</option><option>Marshall Islands</option><option>Macedonia</option><option>Mali</option><option>Myanmar or Burma</option><option>Mongolia</option><option>Macao</option><option>Northern Mariana Islands</option><option>Martinique</option><option>Mauritania</option><option>Montserrat</option><option>Malta</option><option>Mauritius</option><option>Maldives</option><option>Malawi</option><option>Mexico</option><option>Malaysia</option><option>Mozambique</option><option>Namibia</option><option>New Caledonia</option><option>Niger</option><option>Norfolk Island</option><option>Nigeria</option><option>Nicaragua</option><option>Netherlands</option><option>Norway</option><option>Nepal</option><option>Nauru</option><option>Niue</option><option>New Zealand</option><option>Panama</option><option>Peru</option><option>French Polynesia</option><option>Papua New Guinea</option><option>Philippines</option><option>Pakistan</option><option>Poland</option><option>Saint Pierre and Miquelon</option><option>Pitcairn Islands</option><option>Puerto Rico</option><option>Portugal</option><option>Palau</option><option>Paraguay</option><option>Réunion</option><option>Romania</option><option>Serbia</option><option>Russia</option><option>Rwanda</option><option>Solomon Islands</option><option>Seychelles</option><option>Sudan</option><option>Sweden</option><option>Singapore</option><option>Saint Helena</option><option>Slovenia</option><option>Svalbard and Jan Mayen</option><option>Slovakia</option><option>Sierra Leone</option><option>San Marino</option><option>Senegal</option><option>Somalia</option><option>Suriname</option><option>South Sudan</option><option>São Tomé and Príncipe</option><option>El Salvador</option><option>Sint Maarten</option><option>Swaziland</option><option>Turks and Caicos Islands</option><option>Chad</option><option>French Southern Territories</option><option>Togo</option><option>Thailand</option><option>Tajikistan</option><option>Tokelau</option><option>East Timor</option><option>Turkmenistan</option><option>Tunisia</option><option>Tonga</option><option>Turkey</option><option>Trinidad and Tobago</option><option>Tuvalu</option><option>Taiwan</option><option>Tanzania</option><option>Ukraine</option><option>Uganda</option><option>U.S. Minor Outlying Islands</option><option>United States</option><option>Uruguay</option><option>Uzbekistan</option><option>Vatican City</option><option>Saint Vincent and the Grenadines</option><option>Venezuela</option><option>British Virgin Islands</option><option>U.S. Virgin Islands</option><option>Vietnam</option><option>Vanuatu</option><option>Wallis and Futuna</option><option>Samoa</option><option>Kosovo</option><option>Mayotte</option><option>South Africa</option><option>Zambia</option><option>Zimbabwe</option></select>
+                                                        <label id="Na">Current Country</label>
                                                     </div>
                                                     <div class="input-field col m4 s12">
-                                                        <input id="zipcode" type="text" class="validate" placeholder="eg. 50422">
+                                                        <input id="currentcity" type="text" class="validate" placeholder="Riyadh">
+                                                        <label for="currentcity">Current City</label>
+                                                    </div>
+                                                    <div class="input-field col m4 s12">
+                                                        <input id="zipcode" type="text" class="validate" placeholder="50422">
                                                         <label for="zipcode">Zip Code</label>
                                                     </div>
                                                 </div>
@@ -186,14 +197,14 @@
                                                     <div class="input-field col m4 s12">
                                                         <i class="material-icons prefix">email</i>
                                                         <input id="studentemail" type="email" class="validate" placeholder="student@example.com">
-                                                        <label for="studentemail">Student's Email</label>
+                                                        <label for="studentemail" data-error="✘ wrong" data-success="✔ right">Student's Email</label>
                                                     </div>
                                                     <div class="input-field col m4 s12">
                                                         <input id="parentemail" type="email" class="validate" placeholder="parent@example.com">
-                                                        <label for="parentemail">Parent's Email</label>
+                                                        <label for="parentemail" data-error="✘ wrong" data-success="✔ right">Parent's Email</label>
                                                     </div>
                                                     <div class="input-field col m4 s12">
-                                                        <input id="pobox" type="text" class="validate" placeholder="eg. 27272">
+                                                        <input id="pobox" type="text" class="validate" placeholder="27272">
                                                         <label for="pobox">P.O.Box</label>
                                                     </div>
                                                 </div>
@@ -201,16 +212,16 @@
                                                     <div class="input-field col m4 s12">
                                                         <i class="material-icons prefix">library_add</i>
                                                         <input type="text" disabled>
-                                                        <label>Add another phone to contact you with if available:</label>
+                                                        <label>Add another phone if available:</label>
                                                     </div>
                                                     <div class="input-field col m4 s12">
                                                         <select>
-                                                            <option value="" selected disabled>Choose a phone type</option>
-                                                            <option value="1">FAX</option>
-                                                            <option value="2">Home Phone Number</option>
-                                                            <option value="3">Mailing</option>
-                                                            <option value="4">Modem Number</option>
-                                                            <option value="5">Parents</option>
+                                                            <option selected disabled>Choose a phone type</option>
+                                                            <option>FAX</option>
+                                                            <option>Home Phone Number</option>
+                                                            <option>Mailing</option>
+                                                            <option>Modem Number</option>
+                                                            <option>Parents</option>
                                                         </select>
                                                     </div>
                                                     <div class="input-field col m4 s12">
@@ -225,20 +236,32 @@
                                                     <div class="input-field col m4 s12">
                                                         <i class="material-icons prefix">playlist_add</i>
                                                         <input type="text" disabled>
-                                                        <label>Please list majors that you desire enter in order :</label>
+                                                        <label>Please list your desired majors:</label>
                                                     </div>
-                                                    <div class="input-field col m6 s12" id="bloodhound">
-                                                        <input type="text" class="mtypeahead validate" placeholder="eg. Civil Engineering">
+                                                    <div class="input-field col m4 s12">
+                                                        <label>1.</label>
+                                                        <select class="select-number">
+                                                            <option>Accounting</option><option>Applied Physics</option><option>Arabic Language and Literature</option><option>Architectural Engineering</option><option>Arts History and Museum Studies Program</option><option>Biotechnology</option><option>Business Administration- Management</option><option>Business Administration- Marketing</option><option>Chemistry</option><option>Civil Engineering</option><option>Clinical Nutrition and Dietetics</option><option>Communication- Graphic Design and Multimedia</option><option>Communication- Journalism</option><option>Communication-Electronic Media</option><option>Computer Engineering</option><option>Computer Science</option><option>Dental Surgery (B.D.S)</option><option>Electrical and Electronics Engineering</option><option>English Language and Literature</option><option>Environmental Health Sciences</option><option>Fashion Design with Textiles</option><option>Finance</option><option>Fine Arts</option><option>Foundation Year (Colleges of Medicine and Dentistry)</option><option>Foundations of Religion</option><option>Graphic Design and Multimedia</option><option>Health Services administration</option><option>History & Islamic Civilization</option><option>History and Islamic Civilization</option><option>History and Islamic Civilization - Tourist Guide</option><option>Industrial Engineering and Engineering Management</option><option>Information Technology - Multimedia</option><option>Intensive English language Program (IEP)</option><option>Interior Architecture and design</option><option>International Relations</option><option>Jewelry Design</option><option>Jurisprudence and its Fundamentals</option><option>Law</option><option>Management Information Systems</option><option>Mass Communication (English)</option><option>Mathematics</option><option>Mechanical Engineering</option><option>Medical Diagnostic Imaging</option><option>Medical laboratory Sciences</option><option selected>Medicine and Surgery (M.B.B.S)</option><option>Nuclear Science Engineering</option><option>Nursing</option><option>Pharmacy</option><option>Physiotherapy</option><option>Public Administration</option><option>Public Relations</option><option>Shari’a and Law</option><option>Sociology</option><option>Sustainable and Renewable Energy Engineering</option>
+                                                        </select>
                                                     </div>
-                                                    <div class="input-field col m2 s12">
-                                                        <a class="btn-floating btn-large waves-effect waves-light orange"><i class="material-icons">add</i></a>
+                                                    <div class="input-field col m4 s12">
+                                                        <label>2.</label>
+                                                        <select class="select-number">
+                                                            <option>Accounting</option><option>Applied Physics</option><option>Arabic Language and Literature</option><option>Architectural Engineering</option><option>Arts History and Museum Studies Program</option><option>Biotechnology</option><option>Business Administration- Management</option><option>Business Administration- Marketing</option><option>Chemistry</option><option selected>Civil Engineering</option><option>Clinical Nutrition and Dietetics</option><option>Communication- Graphic Design and Multimedia</option><option>Communication- Journalism</option><option>Communication-Electronic Media</option><option>Computer Engineering</option><option>Computer Science</option><option>Dental Surgery (B.D.S)</option><option>Electrical and Electronics Engineering</option><option>English Language and Literature</option><option>Environmental Health Sciences</option><option>Fashion Design with Textiles</option><option>Finance</option><option>Fine Arts</option><option>Foundation Year (Colleges of Medicine and Dentistry)</option><option>Foundations of Religion</option><option>Graphic Design and Multimedia</option><option>Health Services administration</option><option>History & Islamic Civilization</option><option>History and Islamic Civilization</option><option>History and Islamic Civilization - Tourist Guide</option><option>Industrial Engineering and Engineering Management</option><option>Information Technology - Multimedia</option><option>Intensive English language Program (IEP)</option><option>Interior Architecture and design</option><option>International Relations</option><option>Jewelry Design</option><option>Jurisprudence and its Fundamentals</option><option>Law</option><option>Management Information Systems</option><option>Mass Communication (English)</option><option>Mathematics</option><option>Mechanical Engineering</option><option>Medical Diagnostic Imaging</option><option>Medical laboratory Sciences</option><option>Medicine and Surgery (M.B.B.S)</option><option>Nuclear Science Engineering</option><option>Nursing</option><option>Pharmacy</option><option>Physiotherapy</option><option>Public Administration</option><option>Public Relations</option><option>Shari’a and Law</option><option>Sociology</option><option>Sustainable and Renewable Energy Engineering</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div><!--end #step3 -->
                                             <div class="tab-pane" id="step4">
-                                                <div class="row"></div>
                                                 <div class="row">
-                                                    <div class="file-field input-field col m6 s12">
+                                                    <div class="input-field col m12 s12">
+                                                        <p class="center-align red-text text-lighten-2" style="font-size: 1.3rem;">
+                                                            All uploaded documents must be less than <b>1MB</b> in size and in <b>PDF</b>, <b>JPG</b> format only
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="file-field col m6 s12">
                                                         <div class="btn-normal">
                                                             <span>File</span>
                                                             <input type="file">
@@ -246,8 +269,9 @@
                                                         <div class="file-path-wrapper">
                                                             <input class="file-path validate" type="text" placeholder="Copy of Student Passport">
                                                         </div>
+                                                        <p class="help-block red-text">Requierd</p>
                                                     </div>
-                                                    <div class="file-field input-field col m6 s12">
+                                                    <div class="file-field col m6 s12">
                                                         <div class="btn-normal">
                                                             <span>File</span>
                                                             <input type="file">
@@ -255,11 +279,125 @@
                                                         <div class="file-path-wrapper">
                                                             <input class="file-path validate" type="text" placeholder="Copy of Secondary School Certificate">
                                                         </div>
+                                                        <p class="help-block red-text">Requierd</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="file-field col m6 s12">
+                                                        <div class="btn-normal">
+                                                            <span>File</span>
+                                                            <input type="file">
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                            <input class="file-path validate" type="text" placeholder="Health Fitness Certificate including a blood test">
+                                                        </div>
+                                                    </div>
+                                                    <div class="file-field col m6 s12">
+                                                        <div class="btn-normal">
+                                                            <span>File</span>
+                                                            <input type="file">
+                                                        </div>
+                                                        <div class="file-path-wrapper">
+                                                            <input class="file-path validate" type="text" placeholder="Copy of Good Conduct Certificate">
+                                                        </div>
+                                                        <p class="help-block red-text">Requierd</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                     <div class="col m12 s12">
+                                                        <ul class="collapsible" data-collapsible="accordion">
+                                                            <li>
+                                                                <div class="collapsible-header"><i class="material-icons">add</i>Additional requirements for <b>International Students</b>:</div>
+                                                                <div class="collapsible-body">
+                                                                    <div class="file-field input-field col m6 s12" style="padding-left: 0px;">
+                                                                        <div class="btn-normal">
+                                                                            <span>File</span>
+                                                                            <input type="file">
+                                                                        </div>
+                                                                        <div class="file-path-wrapper">
+                                                                            <input class="file-path validate" type="text" placeholder="Proof of completion of 12 high school years">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="file-field input-field col m6 s12" style="padding-right: 0px;">
+                                                                        <div class="btn-normal">
+                                                                            <span>File</span>
+                                                                            <input type="file">
+                                                                        </div>
+                                                                        <div class="file-path-wrapper">
+                                                                            <input class="file-path validate" type="text" placeholder="Proof of acceptance of High School Certificate in the giving country">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col m6 s12">
+                                                        <ul class="collapsible" data-collapsible="accordion">
+                                                            <li>
+                                                                <div class="collapsible-header"><i class="material-icons">add</i>Additional requirements for <b>Bridging Program Students</b>:</div>
+                                                                <div class="collapsible-body">
+                                                                    <div class="file-field input-field col m12 s12 nrlp">
+                                                                        <div class="btn-normal">
+                                                                            <span>File</span>
+                                                                            <input type="file">
+                                                                        </div>
+                                                                        <div class="file-path-wrapper">
+                                                                            <input class="file-path validate" type="text" placeholder="Certified copy of the Diploma Certificate">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="file-field input-field col m12 s12 nrlp">
+                                                                        <div class="btn-normal">
+                                                                            <span>File</span>
+                                                                            <input type="file">
+                                                                        </div>
+                                                                        <div class="file-path-wrapper">
+                                                                            <input class="file-path validate" type="text" placeholder="Certified copy of the Transcript">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="file-field input-field col m12 s12 nrlp">
+                                                                        <div class="btn-normal">
+                                                                            <span>File</span>
+                                                                            <input type="file">
+                                                                        </div>
+                                                                        <div class="file-path-wrapper">
+                                                                            <input class="file-path validate" type="text" placeholder="Equivalent Certificate for the Diploma">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col m6 s12">
+                                                        <ul class="collapsible" data-collapsible="accordion">
+                                                            <li>
+                                                                <div class="collapsible-header"><i class="material-icons">add</i>Additional requirements for <b>Transfer Students</b>:</div>
+                                                                <div class="collapsible-body">
+                                                                    <div class="file-field input-field col m12 s12 nrlp">
+                                                                        <div class="btn-normal">
+                                                                            <span>File</span>
+                                                                            <input type="file">
+                                                                        </div>
+                                                                        <div class="file-path-wrapper">
+                                                                            <input class="file-path validate" type="text" placeholder="Certified copy of the Transcript">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="file-field input-field col m12 s12 nrlp">
+                                                                        <div class="btn-normal">
+                                                                            <span>File</span>
+                                                                            <input type="file">
+                                                                        </div>
+                                                                        <div class="file-path-wrapper">
+                                                                            <input class="file-path validate" type="text" placeholder="Equivalent Certificate from the Ministry of Education">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                             </div><!--end .tab-content -->
                                             <ul class="pager wizard">
-                                                <li class="previous first"><a class="btn-raised" href="javascript:void(0);" id="Fi">First</a></li>
+                                                <li class="previous first"><a class="btn-raised" onclick="Materialize.toast('I am a toast', 4000)" href="javascript:void(0);" id="Fi">First</a></li>
                                                 <li class="previous"><a class="btn-raised" href="javascript:void(0);" id="Pr">Previous</a></li>
                                                 <li class="next last"><a class="btn-raised" href="javascript:void(0);" id="La">Last</a></li>
                                                 <li class="next"><a class="btn-raised" href="javascript:void(0);" id="Ne">Next</a></li>
