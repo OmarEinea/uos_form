@@ -29,7 +29,7 @@
 	}
 	function UTCToday(){
 		var today = new Date();
-		return UTCDate(today.getFullYear(), today.getMonth(), today.getDate());
+		return UTCDate(1990, today.getMonth(), today.getDate());
 	}
 	function alias(method){
 		return function(){

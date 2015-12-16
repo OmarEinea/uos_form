@@ -2005,7 +2005,7 @@ ul {
 .z-depth-0 {
   box-shadow: none !important; }
 
-.z-depth-1, nav, .card-panel, .card, .toast, .btn-normal, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+.z-depth-1, nav, .card-panel, .card, .toast, .btn-normal-notused, .btn-large, .btn-floating, .dropdown-content, .collapsible-notused, .side-nav {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .z-depth-1-half, .btn-normal:hover, .btn-large:hover, .btn-floating:hover {
@@ -8424,4 +8424,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .picker--time .picker__box {
     margin-bottom: 5em; } }
 
+.select-icon {
+    padding-left: 3rem;
+}
 
+.select-number {
+    padding-left: 1.5rem;
+}
+.nrlp {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}

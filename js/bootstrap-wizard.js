@@ -39,6 +39,12 @@
             $index = a.nextIndex();
             $index > a.navigationLength() || c.find('li:has([data-toggle="tab"]):eq(' + $index + ") a")
                 .tab("show")
+			if ($index === 1)
+				Materialize.toast('You\'re doing great... Keep going', 2500)
+			else if ($index === 2)
+				Materialize.toast('Half way through... Yay!', 2500)
+			else if ($index === 3)
+				Materialize.toast('Woosh... Almost done', 2500)
         };
         this.previous =
             function(h) {
@@ -46,6 +52,7 @@
                 $index = a.previousIndex();
                 0 > $index || c.find('li:has([data-toggle="tab"]):eq(' + $index + ") a")
                     .tab("show")
+				Materialize.toast('It\'s always good to check again :)', 2500)
             };
         this.first = function(h) {
             if (b.onFirst && "function" === typeof b.onFirst && !1 === b.onFirst(f, c, a.firstIndex()) || d.hasClass("disabled")) return !1;
