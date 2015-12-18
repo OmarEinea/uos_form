@@ -2009,7 +2009,7 @@ ul {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .z-depth-1-half, .btn-normal:hover, .btn-large:hover, .btn-floating:hover {
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); }
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.18), 0 2px 8px 0 rgba(0, 0, 0, 0.15); }
 
 .z-depth-2 {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
@@ -6345,6 +6345,8 @@ a.waves-effect .waves-ripple {
 .collapsible-body {
   display: none;
   border-bottom: 1px solid #ddd;
+  border-right: 4px solid #fff;
+  border-left: 4px solid #fff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -6965,7 +6967,8 @@ input[type=checkbox]:not(:disabled) ~ .lever:active:after {
   position: absolute; }
 
 .select-wrapper {
-  position: relative; }
+  position: relative;
+  color: #d1d1d1; }
   .select-wrapper input.select-dropdown {
     position: relative;
     cursor: pointer;
@@ -8431,7 +8434,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 .select-number {
     padding-left: 1.5rem;
 }
-.nrlp {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+
+.blackit {
+    color: #313534 !important;
+}
+
+.nodown {
+    margin-bottom: 0 !important;
 }

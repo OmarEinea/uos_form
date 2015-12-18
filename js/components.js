@@ -20,6 +20,7 @@
 		this.initInputMask();
 		this.initWizard();
 		this.initDatePicker();
+        this.initSpinners();
 	};
 
 	// =========================================================================
@@ -71,6 +72,17 @@
 		if (!$.isFunction($.fn.datepicker)) { return; }
 		$('#year-picker').datepicker({autoclose: true, todayHighlight: true, minViewMode: 2});
 		$('#day-picker').datepicker({autoclose: true, todayHighlight: true, format: "yyyy/mm/dd", startView: 2});
+	};
+    
+    // =========================================================================
+	// SPINNERS
+	// =========================================================================
+
+	p.initSpinners = function () {
+		if (!$.isFunction($.fn.spinner)) {
+			return;
+		}
+		$("#gpa").spinner({step: 0.01, numberFormat: "n", min: 0, max: 4});
 	};
 
 	// =========================================================================

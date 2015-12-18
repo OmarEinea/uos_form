@@ -26,7 +26,7 @@
             e(b.previousSelector, d)
                 .toggleClass("disabled", a.firstIndex() >= a.currentIndex());
             e(b.nextSelector, d)
-                .toggleClass("disabled", a.currentIndex() >= a.navigationLength());
+                .toggleClass("disabled", a.currentIndex() >= a.navigationLength() + 1);
             a.rebindClick(e(b.nextSelector, d),
                 a.next);
             a.rebindClick(e(b.previousSelector, d), a.previous);
@@ -43,8 +43,12 @@
 				Materialize.toast('You\'re doing great... Keep going', 2500)
 			else if ($index === 2)
 				Materialize.toast('Half way through... Yay!', 2500)
-			else if ($index === 3)
+			else if ($index === 3) {
 				Materialize.toast('Woosh... Almost done', 2500)
+                Ne.innerHTML = "Submit";
+            }
+            else if ($index === 4)
+                $('#main_modal').openModal();
         };
         this.previous =
             function(h) {
@@ -52,7 +56,10 @@
                 $index = a.previousIndex();
                 0 > $index || c.find('li:has([data-toggle="tab"]):eq(' + $index + ") a")
                     .tab("show")
-				Materialize.toast('It\'s always good to check again :)', 2500)
+                if ($index >= 0)
+				    Materialize.toast('It\'s always good to check again :)' + $index, 2500)
+                if ($index === 2)
+                    Ne.innerHTML = "Next";
             };
         this.first = function(h) {
             if (b.onFirst && "function" === typeof b.onFirst && !1 === b.onFirst(f, c, a.firstIndex()) || d.hasClass("disabled")) return !1;

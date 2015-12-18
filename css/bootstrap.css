@@ -2889,10 +2889,10 @@ button.close {
   border: 0;
   -webkit-appearance: none;
 }
-.modal-open {
+.modal-open-notused {
   overflow: hidden;
 }
-.modal {
+.modal-notused {
   display: none;
   overflow: hidden;
   position: fixed;
@@ -2920,7 +2920,7 @@ button.close {
   -o-transform: translate(0, 0);
   transform: translate(0, 0);
 }
-.modal-open .modal {
+.modal-open-notused .modal-notused {
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -2929,7 +2929,7 @@ button.close {
   width: auto;
   margin: 10px;
 }
-.modal-content {
+.modal-content-notused {
   position: relative;
   background-color: #ffffff;
   border: 1px solid #999999;
@@ -2971,7 +2971,7 @@ button.close {
   position: relative;
   padding: 15px;
 }
-.modal-footer {
+.modal-footer-notused {
   padding: 15px;
   text-align: right;
   border-top: 1px solid #e5e5e5;
@@ -2998,7 +2998,7 @@ button.close {
     width: 600px;
     margin: 30px auto;
   }
-  .modal-content {
+  .modal-content-notused {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
@@ -3487,8 +3487,8 @@ button.close {
 .pager:after,
 .panel-body:before,
 .panel-body:after,
-.modal-footer:before,
-.modal-footer:after {
+.modal-footer-notused:before,
+.modal-footer-notused:after {
   content: " ";
   display: table;
 }
@@ -3506,7 +3506,7 @@ button.close {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after {
+.modal-footer-notused:after {
   clear: both;
 }
 .center-block {

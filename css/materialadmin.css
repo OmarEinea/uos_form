@@ -7462,7 +7462,7 @@ sub.badge {
 .jqstooltip {
   box-sizing: content-box;
 }
-.modal {
+.modal-notused {
   color: #313534;
 }
 .popover {
