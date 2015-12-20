@@ -21,6 +21,17 @@
                 .bind("click", a)
         };
         this.fixNavigationButtons = function() {
+            if (a.currentIndex() === 3) {
+                if (aren.innerHTML === "Arabic")
+                    Ne.innerHTML = "Submit";
+                else if (aren.innerHTML === "English")
+                    Ne.innerHTML = "تسليم";
+            } else {
+                if (aren.innerHTML === "Arabic")
+                    Ne.innerHTML = "Next";
+                else if (aren.innerHTML === "English")
+                    Ne.innerHTML = "التالي";
+            }
             f.length || (c.find("a:first")
                 .tab("show"), f = c.find('li:has([data-toggle="tab"]):first'));
             e(b.previousSelector, d)
@@ -43,10 +54,8 @@
 				Materialize.toast('You\'re doing great... Keep going', 2500)
 			else if ($index === 2)
 				Materialize.toast('Half way through... Yay!', 2500)
-			else if ($index === 3) {
+			else if ($index === 3)
 				Materialize.toast('Woosh... Almost done', 2500)
-                Ne.innerHTML = "Submit";
-            }
             else if ($index === 4)
                 $('#main_modal').openModal();
         };
@@ -57,9 +66,7 @@
                 0 > $index || c.find('li:has([data-toggle="tab"]):eq(' + $index + ") a")
                     .tab("show")
                 if ($index >= 0)
-				    Materialize.toast('It\'s always good to check again :)' + $index, 2500)
-                if ($index === 2)
-                    Ne.innerHTML = "Next";
+				    Materialize.toast('It\'s always good to check again :)', 2500)
             };
         this.first = function(h) {
             if (b.onFirst && "function" === typeof b.onFirst && !1 === b.onFirst(f, c, a.firstIndex()) || d.hasClass("disabled")) return !1;
